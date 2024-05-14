@@ -1,2 +1,2 @@
 # tic-em-trilhas-nodejs
-Playing with nodejs on ticemtrilhas.org (:
+Playing with nodejs on https://ticemtrilhas.org.br (:
