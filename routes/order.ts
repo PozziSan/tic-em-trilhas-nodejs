@@ -11,7 +11,7 @@ orderRouter.post(
     const orderPayload = req.body;
 
     try {
-      const order = await Order.create(...orderPayload);
+      const order = await Order.create(orderPayload);
 
       return res.status(201).json(order);
     } catch (error) {
