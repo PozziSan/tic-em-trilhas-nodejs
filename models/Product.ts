@@ -9,7 +9,7 @@ import Order from "./Order";
 import ProductOrder from "./ProductOrder";
 
 @Table({ modelName: "product", timestamps: true })
-export default class Product extends Model<Product> {
+export default class Product extends Model {
   @Column({ type: DataType.INTEGER, primaryKey: true })
   id?: number;
 

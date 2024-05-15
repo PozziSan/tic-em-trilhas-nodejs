@@ -8,7 +8,7 @@ import {
 import Order from "./Order";
 import Product from "./Product";
 
-@Table({ modelName: "product", timestamps: true })
+@Table({ modelName: "product_order", timestamps: true })
 export default class ProductOrder extends Model {
   @Column({ type: DataType.INTEGER, primaryKey: true })
   id?: number;
