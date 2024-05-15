@@ -1,0 +1,29 @@
+{
+  "name": "tic-em-trilhas-nodejs",
+  "version": "1.0.0",
+  "description": "Demo node.js application presented in ticemtrilhas.org.br",
+  "main": "app.js",
+  "scripts": {
+    "test": "test",
+    "start": "node ./",
+    "start:dev": "nodemon ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https//github.com/PozziSan/tic-em-trilhas-nodejs"
+  },
+  "keywords": [
+    "nodejs",
+    "ticemtrilhas",
+    "vnt",
+    "vntschool"
+  ],
+  "author": "Pedro Pozzi Ferreira",
+  "license": "GPL-3.0-or-later",
+  "dependencies": {
+    "express": "^4.19.2",
+    "sequelize": "^6.37.3",
+    "sqlite": "^5.1.1"
+  },
+  "type": "module"
+}
