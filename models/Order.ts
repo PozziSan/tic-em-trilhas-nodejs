@@ -4,6 +4,7 @@ import {
   Model,
   DataType,
   BelongsToMany,
+  AutoIncrement,
 } from "sequelize-typescript";
 import Product from "./Product";
 import ProductOrder from "./ProductOrder";
@@ -12,6 +13,7 @@ import { Order as OrderInterface } from "../interfaces";
 
 @Table({ tableName: "order", timestamps: true })
 export default class Order extends Model {
+  @AutoIncrement
   @Column({ type: DataType.INTEGER, primaryKey: true })
   id?: number;
 
