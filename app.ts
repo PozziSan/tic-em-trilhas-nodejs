@@ -1,4 +1,7 @@
 import express, { Express } from "express";
+import { initDbAndSequelize } from "./database";
+
+const { db, sequelize } = initDbAndSequelize();
 
 const app: Express = express();
 
