@@ -1,5 +1,5 @@
 import { Database } from "sqlite3";
-import { Sequelize } from "sequelize";
+import { Sequelize } from "sequelize-typescript";
 
 const databaseLocation = "./tic.db";
 
@@ -19,6 +19,7 @@ const createSequelize = () => {
   return new Sequelize({
     dialect: "sqlite",
     storage: databaseLocation,
+    models: [__dirname + "/**/models/*.ts"],
   });
 };
 
