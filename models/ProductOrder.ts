@@ -53,7 +53,7 @@ export default class ProductOrder extends Model {
       if (!quantityByProductId.hasOwnProperty(productId)) {
         quantityByProductId[productId] = po.quantity as number;
       }
-    });
+    }); // TODO:  reduce
 
     const bulkPayload = products.map((product) => {
       return {

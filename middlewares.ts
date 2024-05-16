@@ -14,7 +14,7 @@ export const validateIdIsPresentAndIsInteger = (
   res: Response,
   next: NextFunction
 ) => {
-  if (!req.params.id || typeof Number.isNaN(req.params.id)) {
+  if (!req.params.id || Number.isNaN(req.params.id)) {
     return res.status(400);
   }
 
