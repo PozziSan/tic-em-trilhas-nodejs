@@ -9,6 +9,18 @@ const validateProduct = (product: Product) => {
   return true;
 };
 
+export const validateIdIsPresentAndIsInteger = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  if (!req.params.id || typeof Number.isNaN(req.params.id)) {
+    return res.status(400);
+  }
+
+  next();
+};
+
 export const validateOrderRequest = (
   req: Request,
   res: Response,
