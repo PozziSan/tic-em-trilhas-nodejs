@@ -47,13 +47,15 @@ export default class ProductOrder extends Model {
       throw new Error("Some Product was not Found");
     }
 
-    let quantityByProductId: QuantityByProductId = {};
-    newProductOrders.forEach((po) => {
-      const productId = po.product_id as number;
-      if (!quantityByProductId.hasOwnProperty(productId)) {
-        quantityByProductId[productId] = po.quantity as number;
-      }
-    }); // TODO:  reduce
+    const quantityByProductId: QuantityByProductId = newProductOrders
+      .map((po) => {
+        return {
+          [po.product_id as number]: po.quantity,
+        } as QuantityByProductId;
+      })
+      .reduce((accumulator, quantityByProductId) => {
+        return { ...accumulator, ...quantityByProductId };
+      });
 
     const bulkPayload = products.map((product) => {
       return {
